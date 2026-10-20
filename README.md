@@ -3,7 +3,7 @@
 Brochure web interactivo de Café Amati / Corporate Coffee, sin precios. Incluye:
 
 1. **¿Por qué elegirnos?**: trazabilidad al 100% y ventajas de la marca.
-2. **Origen**: el grano Arábica de Perú (regiones, perfil, puntaje SCA, altitud).
+2. **Origen**: el grano Arábica de Perú (perfil, puntaje SCA, altitud).
 3. **Nuestro café**: 5 clásicos y 5 aromatizados, todos 100% Arábica.
 4. **Tu café ideal**: recomendador por intensidad, tueste, acidez o sabor.
 5. **Contacto**: WhatsApp.

@@ -47,6 +47,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noreferrer"
       aria-label={`Escribir por WhatsApp al ${CONTACT.phone}`}
+      data-wa="boton_flotante"
       className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-medium text-[#0B3B22] shadow-[0_12px_30px_-10px_rgba(0,0,0,0.45)] transition hover:brightness-105 focus-visible:outline-offset-4 print:hidden"
       style={{ marginBottom: 'env(safe-area-inset-bottom, 0px)' }}
     >

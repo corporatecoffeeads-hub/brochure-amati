@@ -32,3 +32,11 @@ npm run build
 
 - Productos y textos: `src/data/catalog.js`.
 - WhatsApp: `src/data/site.js`.
+
+## Medición (Google Analytics 4)
+
+- ID de medición: `G-WV9BB10MBG`, en `index.html`. Para cambiarlo, reemplázalo en las dos apariciones.
+- Visitas: se registran automáticamente.
+- Evento `click_whatsapp` con el parámetro `ubicacion` (boton_flotante, contacto, formulario, como-comprar, crea-tu-marca, pie_de_pagina).
+- Catálogo: evento `descarga_diseno` en «Crea tu marca». Brochure: evento `descarga_pdf`.
+- Lógica en `src/analytics.js`.

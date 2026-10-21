@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CLASSICS, FLAVORED, FLAVORED_TAGLINE, CLASSIC_TAGLINE, ATTRIBUTES, BEAN, REASONS } from '../data/catalog.js';
 import { CONTACT, waLink } from '../data/site.js';
+import { track } from '../analytics.js';
 import { LevelMeter, Bean } from './ui.jsx';
 import heroBeans from '../assets/photos/hero-beans.webp';
 import roasted from '../assets/photos/roasted.webp';
@@ -64,7 +65,10 @@ export function Header() {
         </ul>
         <button
           type="button"
-          onClick={() => window.print()}
+          onClick={() => {
+            track('descarga_pdf');
+            window.print();
+          }}
           className={`hidden rounded-full border px-4 py-2 text-[13px] transition lg:inline-flex ${solid ? 'border-grano/25 text-grano hover:border-grano/60' : 'border-white/30 text-crema hover:border-white/70'}`}
         >
           Descargar PDF
@@ -96,6 +100,7 @@ export function Header() {
               type="button"
               onClick={() => {
                 setOpen(false);
+                track('descarga_pdf');
                 setTimeout(() => window.print(), 50);
               }}
               className="block py-3 font-display text-2xl text-grano"
@@ -327,7 +332,7 @@ export function Footer() {
     CONTACT.website && { label: CONTACT.website.replace(/^https?:\/\//, ''), href: CONTACT.website },
   ].filter(Boolean);
   return (
-    <footer className="bg-tinta text-arena/70">
+    <footer className="bg-tinta text-arena/70" data-wa="pie_de_pagina">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-14 sm:px-8 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-8">
           <img src={corporateLogo} alt="Corporate Coffee" width="120" height="91" className="h-16 w-auto invert" />
